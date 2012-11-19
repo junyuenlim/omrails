@@ -1,0 +1,43 @@
+<% if user_signed_in? %>
+	<h1> You're signed in! </h1>
+<% else %>
+<div class="center hero-unit">
+    <h1>Welcome to One Month Rails</h1>
+
+    <h2>
+      You've found the home page for the
+      <a href="http://omrails.com/">One Month Rails</a>
+      first application.
+    </h2>
+
+    <%= link_to "Sign up now!", new_user_registration_path , 
+                                class: "btn btn-large btn-primary" %>
+
+</div>
+
+<form action="http://nomnomnom.createsend.com/t/t/s/mykh/" method="post" id="subForm">
+		<div class="control-group">
+			<label class="control-label" for="name">Name:</label>
+				<div class="controls">
+					<div class="input-prepend">
+				<span class="add-on"><i class="icon-user"></i></span>
+				<input type="text" name="cm-name" id="name" />
+					</div>
+				</div>
+			<label class="control-label" for="mykh-mykh">Email address:</label>
+				<div class="controls">
+					<div class="input-prepend">
+				<span class="add-on"><i class="icon-envelope"></i></span>
+				<input type="text" name="cm-mykh-mykh" id="mykh-mykh">
+					</div>
+				</div>
+
+			<label for="Interest">Interest:</label>
+			<input type="checkbox" name="cm-fo-gw" id="cm7084" value="7084" /> <label for="cm7084">Proud to be local!</label>
+			<input type="checkbox" name="cm-fo-gw" id="cm7085" value="7085" /> <label for="cm7085">Love to meet locals!</label>
+
+			<input type="submit" value="Keep me posted!" />
+		</div>
+</form>
+
+<% end %>
